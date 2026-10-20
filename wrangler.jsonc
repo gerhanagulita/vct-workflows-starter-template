@@ -20,12 +20,28 @@
 	 * https://developers.cloudflare.com/workflows/
 	 */
 	"workflows": [
-		{
-			"name": "my-workflow",
-			"binding": "MY_WORKFLOW",
-			"class_name": "MyWorkflow"
-		}
+	    {
+	      "binding": "MY_WORKFLOW",
+	      "name": "my-workflow",
+	      "class_name": "MyWorkflow"
+	    }
+  	],
+	"flagship": [
+	    {
+	      "binding": "VCT_APP",
+	      "app_id": "b846f383-df47-4a9d-9976-663b17a0aa50"
+	    }
 	],
+	"unsafe": {
+	    "bindings": [
+	      {
+	        "name": "WORKFLOW_STATUS",
+	        "type": "durable_object_namespace",
+	        "class_name": "WorkflowStatusDO",
+	        "namespace_id": "e4dc79a3850c4c3e829e86dcffd84e6e"
+	      }
+	    ]
+	},
 	/**
 	 * Durable Objects
 	 * Used for WebSocket state management and real-time updates
